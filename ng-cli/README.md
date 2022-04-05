@@ -1,19 +1,19 @@
 # Angular CLI
 
-# Build Image
+## Build Image
 docker build -t ng-cli .
 
-# Run
+## Run
 docker run --rm -it --volume $PWD:/app ng-cli
 
-# Create project
+## Create project
 docker run --rm -it --volume $PWD:/app ng-cli new myApp
 
-# dev (cd folder myApp)
+## dev (cd folder myApp)
 docker run -d --rm -it --name=myApp --volume $PWD:/app -p 4500:4200 ng-cli serve --host=0.0.0.0
 
-# show logs
+## show logs
 docker logs myApp -f
 
-# stop container
+## stop container
 docker stop myApp
